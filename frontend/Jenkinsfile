@@ -1,0 +1,21 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Install') {
+            steps {
+                dir('client') {
+                    sh 'npm install'
+                }
+            }
+        }
+
+        stage('Build') {
+            steps {
+                dir('client') {
+                    sh 'npm run build'
+                }
+            }
+        }
+    }
+}
