@@ -13,6 +13,7 @@ const FoodDisplay = ({ category }) => {
 
       <div className="food-display-list">
         {food_list.map((item, index) => {
+          console.log(item);
           return (
             <FoodItem
               key={index}
@@ -20,6 +21,7 @@ const FoodDisplay = ({ category }) => {
               name={item.name}
               description={item.description}
               image={item.image}
+              price={item.price}
             />
           )
         })}
