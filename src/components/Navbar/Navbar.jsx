@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 import './Navbar.css'
 import { assets } from '../../assets/assets'
-import {link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-const Navbar = () => {
+const Navbar = (setShowLogin) => {
   const [Menu,setMenu] =useState("Menu"); 
   return (
     <div className='navbar'>
       <img src={assets.logo} alt="" className='logo' />
      <ul className="navbar-menu" >
-      <link to='/' onClick={()=>setMenu("Home")} className={Menu==="Home"?"active":""}>Home</link>
+      <Link to='/' onClick={()=>setMenu("Home")} className={Menu==="Home"?"active":""}>Home</Link>
       <a href='#explore-menu' onClick={()=>setMenu("Menu")} className={Menu==="Menu"?"active":""}>Menu</a>
       <a href='#app-download' onClick={()=>setMenu("Mobile-app")} className={Menu==="Mobile-app"?"active":""}>Mobile-app</a>
       <a href='#footer' onClick={()=>setMenu("Contact us")} className={Menu==="Contact us"?"active":""}>Contact us</a>
@@ -20,7 +20,7 @@ const Navbar = () => {
           <img src={assets.basket_icon} alt="" />
           <div className='dot'></div>
         </div>
-          <button>sign in</button>
+          <button onclick={()=> setShowLogin(true)}>sign in</button>
       </div>
     </div>
   )
