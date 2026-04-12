@@ -3,13 +3,13 @@ import './Navbar.css'
 import { assets } from '../../assets/assets'
 import {Link} from 'react-router-dom'
 
-const Navbar = (setShowLogin) => {
-  const [Menu,setMenu] =useState("Menu"); 
+const Navbar = ({setShowLogin}) => {
+  const [menu,setMenu] =useState("menu"); 
   return (
     <div className='navbar'>
       <img src={assets.logo} alt="" className='logo' />
      <ul className="navbar-menu" >
-      <Link to='/' onClick={()=>setMenu("Home")} className={Menu==="Home"?"active":""}>Home</Link>
+      <Link to='/' onClick={()=>setMenu("Home")} className={menu==="Home"?"active":""}>Home</Link>
       <a href='#explore-menu' onClick={()=>setMenu("Menu")} className={Menu==="Menu"?"active":""}>Menu</a>
       <a href='#app-download' onClick={()=>setMenu("Mobile-app")} className={Menu==="Mobile-app"?"active":""}>Mobile-app</a>
       <a href='#footer' onClick={()=>setMenu("Contact us")} className={Menu==="Contact us"?"active":""}>Contact us</a>
@@ -20,7 +20,7 @@ const Navbar = (setShowLogin) => {
           <img src={assets.basket_icon} alt="" />
           <div className='dot'></div>
         </div>
-          <button onclick={()=> setShowLogin(true)}>sign in</button>
+          <button onClick={()=> setShowLogin(true)}>sign in</button>
       </div>
     </div>
   )
