@@ -5,13 +5,7 @@ A full-stack Food Delivery Web Application built using React.js, Node.js, Expres
 
 ---
 
-## 🚀 Features
 
-* 🔐 User Authentication (Login/Register)
-* 🍕 Browse Food Items / Restaurants
-* 🛒 Add to Cart & Manage Orders
-* 💳 Checkout System
-* 🛠️ Admin Dashboard (Add/Edit/Delete Food Items)
 
 =======
 # React + Vite
