@@ -1,8 +1,6 @@
 <<<<<<< HEAD
 # 🍔 Food Delivery App (MERN Stack)
 
-A full-stack Food Delivery Web Application built using React.js, Node.js, Express, and MongoDB. This app allows users to browse food items, add them to cart, and place orders online.
-
 ---
 
 
